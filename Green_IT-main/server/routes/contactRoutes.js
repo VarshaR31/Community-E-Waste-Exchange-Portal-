@@ -13,9 +13,9 @@ const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 465,
     auth: {
-        user: 'reddyvarsha0131@gmail.com', 
-        pass: 'hreyhpiiuxjfxwkl'
-    }
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS
+}
 });
 
 // POST route for saving and sending contact form messages
